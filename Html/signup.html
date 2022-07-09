@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>signup</title>
+    <style>
+      .body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px;
+      }
+
+      .wrap_1 {
+        width: 245px;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+      }
+
+      .wrap_2 {
+        width: 245px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 33px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/details" method="get">
+      <div class="body">
+        <div class="wrap_1">
+          <label>Name</label>
+          <input type="text" name="name" required />
+        </div>
+        <div class="wrap_1">
+          <label>Age</label>
+          <input type="number" name="age" required />
+        </div>
+        <div class="wrap_1">
+          <label>Phone</label>
+          <input type="tel" name="phone" required />
+        </div>
+        <div class="wrap_2">
+          <input type="submit" />
+          <input type="reset" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
