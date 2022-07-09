@@ -45,15 +45,19 @@ http.createServer((req, res) => {
         res.writeHead(200, { 'Content-type': 'text/html' })
         res.write(`<div class="body">
                     <div class="wrap_1" >
-                        <label>Name : ${urlPath.query.name}</label>
+                        <label>Name : ${urlPath ? urlPath.query.name ? urlPath.query.name : '' : ''}</label>
                     </div>
                     <br/>
                     <div class="wrap_1">
-                        <label>Age: ${urlPath.query.age}</label>
+                        <label>Age: ${urlPath ? urlPath.query.age ? urlPath.query.age : '' : ''}</label>
                     </div>
                     <br/>
                     <div class="wrap_1">
-                        <label>Phone: ${urlPath.query.phone}</label>
+                        <label>Phone: ${urlPath ? urlPath.query.phone ? urlPath.query.phone : '' : ''}</label>
+                    </div>
+                    <br/>
+                    <div>
+                        <a href='/'> Home </a>
                     </div>
                 </div>`);
         res.end();
