@@ -6,8 +6,8 @@ const port = 3000;
 
 http.createServer((req, res) => {
     const urlPath = url.parse(req.url, true); // we add true to get the result in the form of an object
-    let userData = [];
 
+    console.log(req.url);
     if (urlPath.pathname === '/') {
         fs.readFile('../Html/welcome.html', (error, data) => {
             if (data) {
