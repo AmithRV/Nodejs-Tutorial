@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
+const date = require('./dateAndTime');
 
 const port = 3000;
 
@@ -43,7 +44,10 @@ http.createServer((req, res) => {
         })
     } else if (urlPath.pathname === '/details') {
         res.writeHead(200, { 'Content-type': 'text/html' })
-        res.write(`<div class="body">
+        res.write(`
+        <span>Date : ${new Date(date.myDateTime()).toLocaleString()}</span>
+        <div class="body">
+                    <br/>
                     <div class="wrap_1" >
                         <label>Name : ${urlPath ? urlPath.query.name ? urlPath.query.name : '' : ''}</label>
                     </div>
