@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create File</title>
+    <style>
+      .app {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/create-file-request" method="get">
+      <div class="app">
+        <div>
+          <label>File name : </label>
+          <input type="text" name="file_name" />
+        </div>
+        <br />
+        <div>
+          <label>File content : </label>
+          <br /><br />
+          <textarea id="file_content" name="file_content" rows="4" cols="50">
+          </textarea>
+        </div>
+      </div>
+      <br />
+      <div>
+        <input type="submit" value="Create" />
+      </div>
+    </form>
+  </body>
+</html>
