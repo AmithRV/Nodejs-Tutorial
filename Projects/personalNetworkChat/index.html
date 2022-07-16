@@ -7,17 +7,15 @@
     <title>Message</title>
   </head>
   <body>
-    <div>
-      <form action="/message" method="get">
-        <!-- <input type="text" name="message" /> -->
-        <textarea name="message"></textarea>
-        <br /><br />
-        <input
-          type="submit"
-          value="send"
-          onclick="()=>{window.location.reload()}"
-        />
-      </form>
-    </div>
+    <form action="message" method="get">
+      <textarea
+        name="message_content"
+        style="width: 500px; height: 150px"
+        placeholder="...."
+      ></textarea>
+      <br /><br />
+      <input type="submit" value="send" name="send" />
+      <!-- <button type="submit" name="send">Send</button> -->
+    </form>
   </body>
 </html>
